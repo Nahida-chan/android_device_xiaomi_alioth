@@ -31,6 +31,10 @@ $(call inherit-product-if-exists, device/xiaomi/camera/miuicamera.mk)
 # Libinit
 $(call soong_config_set,libinit,vendor_init_lib,//$(LOCAL_PATH):init_xiaomi_alioth)
 
+# Miui Camera STLicense
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/camera/st_license.lic:$(TARGET_COPY_OUT_VENDOR)/etc/camera/st_license.lic
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
