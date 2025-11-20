@@ -18,6 +18,15 @@ $(call inherit-product, device/xiaomi/alioth/device.mk)
 TARGET_USES_MIUI_CAMERA := true
 TARGET_INCLUDES_MIUI_CAMERA := true
 
+# Enable UI enhancements
+TARGET_ENABLE_BLUR := true
+
+# Enable features
+TARGET_SUPPORTS_QUICK_TAP := true
+BYPASS_CHARGE_SUPPORTED := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+USE_PIXEL_CHARGING := true
+
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := lineage_alioth
 PRODUCT_DEVICE := alioth
